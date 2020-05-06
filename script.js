@@ -1,6 +1,3 @@
-// Declaring a counter variable for assigning ids to the view menu buttons
-let counter = 1;
-
 // Delcaring the fetch variable
 let fetchLink = ``;
 

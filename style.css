@@ -9,7 +9,7 @@ body {
 	flex-wrap: wrap;
 	text-decoration: none;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	width: 95vw;
+	width: 99vw;
     justify-content: center;
     /* padding: 2em; */
 }
@@ -37,11 +37,12 @@ body {
 	padding: 10px;
 }
 #search-container {
-	width: 95vw;
-    margin-bottom: 2em;
-    margin-top: 5em;
+    width: 99vw;
+    height: 25vh;
 	justify-content: center;
     display: flex;
+    align-items: center;
+    padding-top: 2em;
 }
 #search-bar {
 	margin-bottom: 2em;
