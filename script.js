@@ -26,6 +26,7 @@ function restaurantFetch(includeSearch, search = 'none') {
 				.menu_url}" target= _blank><button id="card-${counter}" class="menu-button">View Menu</button></a></div>`;
 			counter++;
 		});
+		noResultsFound();
 	});
 }
 
@@ -59,8 +60,14 @@ function searchFunction() {
 	clearSearchText();
 }
 
+// Creating a function in case there are no search results found
+function noResultsFound() {
+	if (document.querySelector(`#restaurant-container`).innerHTML === '') {
+		document.querySelector(`#restaurant-container`).innerHTML = `<h3>No results found</h3>`;
+	}
+}
+
 // Adding event listener for when the search button is pressed
 document.querySelector(`#search-button`).addEventListener('click', (searchEvent) => {
-	searchFunction()
+	searchFunction();
 });
-
