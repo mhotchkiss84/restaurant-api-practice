@@ -16,12 +16,10 @@ function restaurantFetch(includeSearch, search = 'none') {
 			document.querySelector(
 				`#restaurant-container`
 			).innerHTML += `<div class="restaurant-card"><a href="${element.restaurant.url}" target= _blank> ${element
-				.restaurant.name}</a>
-        <p>${element.restaurant.location.address}</p> <p>Rating: ${element.restaurant.user_rating
-				.aggregate_rating}</p><p>Average Cost For Two: ${element.restaurant
+				.restaurant.name}</a><p>${element.restaurant.location.address}</p> <p>Rating: ${element.restaurant
+				.user_rating.aggregate_rating}</p><p>Average Cost For Two: ${element.restaurant
 				.average_cost_for_two}</p><a href="${element.restaurant
-				.menu_url}" target= _blank><button id="card-${counter}" class="menu-button">View Menu</button></a></div>`;
-			counter++;
+				.menu_url}" target= _blank><button class="menu-button">View Menu</button></a></div>`;
 		});
 		noResultsFound();
 	});
