@@ -1,5 +1,7 @@
 body {
-	margin: 0%;
+    margin: 0%;
+    background-color: cornflowerblue;
+    color: white;
 }
 #restaurant-container {
 	display: flex;
@@ -8,19 +10,22 @@ body {
 	text-decoration: none;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	width: 95vw;
-	justify-content: center;
+    justify-content: center;
+    /* padding: 2em; */
 }
 .restaurant-card {
-	border: 1px solid red;
+	border: 2px solid black;
 	display: flex;
 	flex-direction: column;
 	padding: 5em;
 	flex-wrap: wrap;
-	width: 21vw;
+    width: 21vw;
+    text-align: center;
+    /* margin: auto; */
 }
 .restaurant-card a {
 	text-decoration: none;
-	color: black;
+	color: white;
 	font-size: 20px;
 	font-weight: bold;
 	margin: auto;
@@ -34,13 +39,10 @@ body {
 #search-container {
 	width: 95vw;
     margin-bottom: 2em;
-    margin-top: 2em;
+    margin-top: 5em;
 	justify-content: center;
-	/* border: 1px solid blue; */
     display: flex;
-    
 }
 #search-bar {
-	border: 20 px solid red;
 	margin-bottom: 2em;
 }
