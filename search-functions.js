@@ -15,7 +15,7 @@ const clearScreen = () => {
     document.querySelector(`#restaurant-container`).innerHTML = ``;
 }
 // Creating an object with search functions to be used outside the file
-let seachFunctions = {
+const seachFunctions = {
     // Creating a function for no results found
 	noResultsFound: () => {
 		if (document.querySelector(`#restaurant-container`).innerHTML === '') {
