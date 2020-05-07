@@ -1,7 +1,7 @@
-// Importing fetch function
-import restaurantFetch from './fetch.js';
 // Importing variables
 import variables from './variables.js';
+// Importing fetch function
+import restaurantFetch from './fetch.js';
 // Creating a function for getting the search text
 const getSearchText = () => {
     variables.searchText = document.querySelector(`#search-txt`).value;
