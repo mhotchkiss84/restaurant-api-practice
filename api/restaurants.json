@@ -17,42 +17,6 @@
       "averageUserRating": "4.6",
       "averageCostPerTwo": 20,
       "address": "1259 Sidco Drive"
-    },
-    {
-      "name": "Test",
-      "url": "Test",
-      "menuURL": "ttt",
-      "averageUserRating": "aas",
-      "averageCostPerTwo": "sss",
-      "address": "tttttt",
-      "id": 3
-    },
-    {
-      "name": "Thai",
-      "url": "",
-      "menuURL": "",
-      "averageUserRating": "",
-      "averageCostPerTwo": "",
-      "address": "",
-      "id": 4
-    },
-    {
-      "name": "Michael Hotchkiss",
-      "url": "Testsf",
-      "menuURL": "fsaf",
-      "averageUserRating": "",
-      "averageCostPerTwo": "",
-      "address": "1722 Price Lane",
-      "id": 5
-    },
-    {
-      "name": "fsfsaf",
-      "url": "aaa",
-      "menuURL": "aaa",
-      "averageUserRating": "s",
-      "averageCostPerTwo": "2",
-      "address": "aaaa",
-      "id": 6
     }
   ]
 }
