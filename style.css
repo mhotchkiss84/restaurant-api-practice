@@ -1,7 +1,23 @@
 body {
     margin: 0%;
     background-color: cornflowerblue;
-    color: white;
+	color: white;
+}
+#form-container{
+	display: flex;
+	flex-direction: column;
+	width: 99vw;
+	justify-content: center;
+	align-items: center;
+}
+#menu-form{
+	display: flex;
+	flex-direction: column;
+	width: 50vw;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1em;
+	margin-top: 2em;
 }
 #restaurant-container {
 	display: flex;
