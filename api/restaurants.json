@@ -1,22 +1,13 @@
 {
   "restaurants": [
     {
-      "id": 1,
-      "url": "http://cookoutmilkshakereviews.com/",
-      "menuURL": "http://cookoutmilkshakereviews.com/",
-      "name": "Deg Thai",
-      "averageUserRating": "4.8",
-      "averageCostPerTwo": 20,
-      "address": "412 Shoemaker Blvd"
-    },
-    {
-      "id": 2,
-      "url": "http://cookoutmilkshakereviews.com/",
-      "menuURL": "http://cookoutmilkshakereviews.com/",
-      "name": "Smiling Elephant",
-      "averageUserRating": "4.6",
-      "averageCostPerTwo": 20,
-      "address": "1259 Sidco Drive"
+      "name": "Michael Hotchkiss",
+      "url": "",
+      "menuURL": "",
+      "averageUserRating": "",
+      "averageCostPerTwo": "",
+      "address": "1722 Price Lane",
+      "id": 1
     }
   ]
 }

@@ -32,6 +32,11 @@ const seachFunctions = {
 			restaurantFetch.restaurantFetch(false);
 		}
 		clearSearchText();
+		restaurantFetch.resetCounter()
+	},
+	refreshPage: () => {
+		clearScreen()
+		restaurantFetch.restaurantFetch(false)
 	}
 };
 // Exporting the searchFunction object
