@@ -22,7 +22,6 @@ document.body.addEventListener("click", deleteEvent => {
 	if(event.target.id.includes(`del`)){
 		let targetID = event.target.id
 		targetID = targetID.split("-").pop();
-		console.log(targetID)
 		restaurantFetch.deleteEntry(targetID)
 	}
 })

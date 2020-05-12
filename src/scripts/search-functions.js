@@ -4,25 +4,25 @@ import variables from './variables.js';
 import restaurantFetch from './fetch.js';
 // Creating a function for getting the search text
 const getSearchText = () => {
-    variables.searchText = document.querySelector(`#search-txt`).value;
-}
+	variables.searchText = document.querySelector(`#search-txt`).value;
+};
 // Creating a function for clearing the search text
 const clearSearchText = () => {
-    document.querySelector(`#search-txt`).value = ``;
-}
+	document.querySelector(`#search-txt`).value = ``;
+};
 // Creating a function for clearing the container
 const clearScreen = () => {
-    document.querySelector(`#restaurant-container`).innerHTML = ``;
-}
+	document.querySelector(`#restaurant-container`).innerHTML = ``;
+};
 // Creating an object with search functions to be used outside the file
 const seachFunctions = {
-    // Creating a function for no results found
+	// Creating a function for no results found
 	noResultsFound: () => {
 		if (document.querySelector(`#restaurant-container`).innerHTML === '') {
 			document.querySelector(`#restaurant-container`).innerHTML = `<h3>No results found</h3>`;
 		}
-    },
-    // Creating a search function
+	},
+	// Creating a search function
 	searchFunction: () => {
 		clearScreen();
 		getSearchText();
@@ -32,11 +32,11 @@ const seachFunctions = {
 			restaurantFetch.restaurantFetch(false);
 		}
 		clearSearchText();
-		restaurantFetch.resetCounter()
+		restaurantFetch.resetCounter();
 	},
 	refreshPage: () => {
-		clearScreen()
-		restaurantFetch.restaurantFetch(false)
+		clearScreen();
+		restaurantFetch.restaurantFetch(false);
 	}
 };
 // Exporting the searchFunction object

@@ -2,9 +2,6 @@
 import jsVar from './variables.js';
 // Importing the search functions
 import searchFunctions from './search-functions.js';
-
-// Delcaring a counter variable for setting the IDs of the delete buttons
-let counter = 0;
 // Creating a function to build and return a HTML string.
 function buildHTMLString(element) {
 	let htmlString = `<div class="restaurant-card"><a href="${element.url}" target= _blank> ${element.name}</a><p>${element.address}</p> <p>Rating: ${element.averageUserRating}</p><p>Average Cost For Two:  $ ${element.averageCostPerTwo}</p><a href="${element.menuURL}" target= _blank><button class="menu-button">View Menu</button></a><button id="del-btn-${element.id}">Delete</button></div>`;
@@ -16,7 +13,6 @@ function restaurantSearch(searchTerm) {
 		parsedRestaurants.forEach((element) => {
 			if (element.name.toLowerCase().includes(searchTerm.toLowerCase())) {
 				document.querySelector(`#restaurant-container`).innerHTML += buildHTMLString(element);
-				counter++;
 			}
 		});
 		searchFunctions.noResultsFound();
@@ -37,12 +33,12 @@ const restaurantFetch = {
 			fetch(jsVar.fetchLink).then((restaurants) => restaurants.json()).then((parsedRestaurants) => {
 				parsedRestaurants.forEach((element) => {
 					document.querySelector(`#restaurant-container`).innerHTML += buildHTMLString(element);
-					counter++;
 				});
 				searchFunctions.noResultsFound(); //Running function to check if results were displayed after search
 			});
 		}
 	},
+	// Creating a function for submitting a new entry to the JSON server
 	submitRestaurant: (jsonFormData) => {
 		fetch('http://localhost:8088/restaurants', {
 			method: 'POST',
@@ -51,18 +47,16 @@ const restaurantFetch = {
 			},
 			body: JSON.stringify(jsonFormData)
 		}).then(() => {
-			searchFunctions.refreshPage()
+			searchFunctions.refreshPage();
 			// restaurantFetch.restaurantFetch(false);
 		});
 	},
-	resetCounter: () => {
-		counter = 0;
-	},
+	// Creating a function for deleting entries from JSON.
 	deleteEntry: (entryID) => {
 		fetch(`http://localhost:8088/restaurants/${entryID}`, {
 			method: 'DELETE'
 		}).then(() => {
-			searchFunctions.refreshPage()
+			searchFunctions.refreshPage();
 		});
 	}
 };
