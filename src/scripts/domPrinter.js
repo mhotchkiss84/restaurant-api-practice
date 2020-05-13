@@ -2,13 +2,8 @@
 import restraurantFetch from './fetch.js';
 import restaurantFetch from './fetch.js';
 // Creating an object for storing functions for export
-const domPrinter = {
-	// Creating a function for when the edit button is clicked
-	editButton: () => {
-		const targetID = event.target.id.split('-')[2];
-		let cardHTML = document.querySelector(`#card-id-${targetID}`);
-		restaurantFetch.singleEntry(targetID).then((singleCardObject) => {
-			cardHTML.innerHTML = `<form id="edit-form">
+function editForm (singleCardObject) {
+    let htmlString = `<form id="edit-form">
             <label for="restaurant-name">Name</label>
             <input type="text" id="edit-name-txt" value="${singleCardObject.name}">
             <label for="restaurant-url">Website</label>
@@ -22,7 +17,16 @@ const domPrinter = {
             <label for="cost-per-two">Average Cost Per Two</label>
             <input type="text" id="edit-cost-per-two" value="${singleCardObject.averageCostPerTwo}">
             </form>
-            <button id="save-btn">Save</button>`;
+            <button id="save-btn-${singleCardObject.id}">Save</button>`;
+            return htmlString
+}
+const domPrinter = {
+	// Creating a function for when the edit button is clicked
+	editButton: () => {
+		const targetID = event.target.id.split('-')[2];
+		let cardHTML = document.querySelector(`#card-id-${targetID}`);
+		restaurantFetch.singleEntry(targetID).then((singleCardObject) => {
+			cardHTML.innerHTML = editForm(singleCardObject)
 		});
         // To DO: save button stuff
 	}
