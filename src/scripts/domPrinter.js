@@ -7,7 +7,6 @@ const domPrinter = {
 	editButton: () => {
 		const targetID = event.target.id.split('-')[2];
 		let cardHTML = document.querySelector(`#card-id-${targetID}`);
-		// console.log(cardHTML)
 		restaurantFetch.singleEntry(targetID).then((singleCardObject) => {
 			cardHTML.innerHTML = `<form id="edit-form">
             <label for="restaurant-name">Name</label>
@@ -25,10 +24,7 @@ const domPrinter = {
             </form>
             <button id="save-btn">Save</button>`;
 		});
-		// console.log(singleCard)
-		// cardHTML.innerHTML = `Test`
-		// Make fetch function for single card
-		// Fill inner HTML with form and values from json
+        // To DO: save button stuff
 	}
 };
 export default domPrinter;
