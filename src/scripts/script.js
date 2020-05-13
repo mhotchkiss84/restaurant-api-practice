@@ -4,6 +4,8 @@ import restaurantFetch from './fetch.js';
 import searchFunctions from './search-functions.js';
 // Importing user input functions
 import userInput from './user-input.js';
+// Importing DOM printer functions
+import domPrinter from './domPrinter.js'
 import jsVar from './variables.js';
 // Loading the function showing all restaurants when the user loads the page
 restaurantFetch.restaurantFetch(false);
@@ -23,5 +25,12 @@ document.body.addEventListener("click", deleteEvent => {
 		let targetID = event.target.id
 		targetID = targetID.split("-").pop();
 		restaurantFetch.deleteEntry(targetID)
+	}
+})
+
+// Adding an event listener for the edit button
+document.body.addEventListener("click", editEvent => {
+	if(event.target.id.includes("edit-btn")){
+		domPrinter.editButton()
 	}
 })
