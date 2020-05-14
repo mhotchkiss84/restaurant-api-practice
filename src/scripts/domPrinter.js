@@ -29,6 +29,29 @@ const domPrinter = {
 			cardHTML.innerHTML = editForm(singleCardObject)
 		});
         // To DO: save button stuff
-	}
+    },
+    saveButton: () => {
+        const targetID = event.target.id.split(`-`)[2]
+        // console.log(targetID)
+        // Set variable values with input values
+        const restaurantName = document.querySelector(`#edit-name-txt`).value 
+        const restaurantURL = document.querySelector(`#edit-restaurant-url`).value
+        const restaurantMenuURL = document.querySelector(`#edit-menu-url`).value
+        const restaurantAddress = document.querySelector(`#edit-address`).value
+        const restaurantRating = document.querySelector(`#edit-user-rating`).value
+        const restaurantCost = document.querySelector(`#edit-cost-per-two`).value
+        const restaurantID = targetID
+        const editedRestaurant = {
+            name: restaurantName,
+            url: restaurantURL,
+            menuURL: restaurantMenuURL,
+            averageUserRating: restaurantRating,
+            averageCostPerTwo: restaurantCost,
+            address: restaurantAddress,
+            id: restaurantID
+        }
+        restaurantFetch.editEntry(editedRestaurant)
+}
 };
+// Exporting the domPrinter functions
 export default domPrinter;

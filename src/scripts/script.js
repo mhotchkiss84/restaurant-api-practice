@@ -21,16 +21,13 @@ document.querySelector(`#search-button`).addEventListener('click', (searchEvent)
 });
 // Adding an event listener for the delete buttons
 document.body.addEventListener("click", deleteEvent => {
-	if(event.target.id.includes(`del`)){
+	if(event.target.id.includes("del")){
 		let targetID = event.target.id
 		targetID = targetID.split("-").pop();
 		restaurantFetch.deleteEntry(targetID)
-	}
-})
-
-// Adding an event listener for the edit button
-document.body.addEventListener("click", editEvent => {
-	if(event.target.id.includes("edit-btn")){
+	} else if(event.target.id.includes("edit-btn")){
 		domPrinter.editButton()
+	} else if(event.target.id.includes("save-btn")){
+		domPrinter.saveButton()
 	}
 })

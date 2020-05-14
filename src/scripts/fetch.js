@@ -66,6 +66,18 @@ const restaurantFetch = {
 			.then((singleCardObject) => {
 				return singleCardObject;
 			});
+	},
+	editEntry: (editedObject) => {
+				return fetch(`http://localhost:8088/restaurants/${editedObject.id}`,{
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify(editedObject)
+			}).then(() => {
+				searchFunctions.refreshPage()
+			})
+		
 	}
 };
 // Exporting the fetch function as an object
